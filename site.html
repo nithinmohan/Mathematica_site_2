@@ -1,0 +1,398 @@
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<style>/*
+@media all and (min-width: 50px)   {  body  { font-size:0.1em;  } }
+@media all and (min-width: 100px)  {  body  { font-size:0.2em;  } }
+@media all and (min-width: 200px)  {  body  { font-size:0.4em;  } }
+@media all and (min-width: 300px)  {  body  { font-size:0.6em;  } }
+@media all and (min-width: 400px)  {  body  { font-size:0.8em;  } }
+@media all and (min-width: 500px)  {  body  { font-size:1.0em;  } }
+@media all and (min-width: 600px)  {  body  { font-size:1.2em;  } }
+@media all and (min-width: 700px)  {  body  { font-size:1.4em;  } }
+@media all and (min-width: 800px)  {  body  { font-size:1.6em;  } }
+@media all and (min-width: 900px)  {  body  { font-size:1.8em;  } }
+@media all and (min-width: 1000px) {  body  { font-size:2.0em;  } }
+@media all and (min-width: 1100px) {  body  { font-size:2.2em;  } }
+@media all and (min-width: 1200px) {  body  { font-size:2.4em;  } }
+@media all and (min-width: 1300px) {  body  { font-size:2.6em;  } }
+@media all and (min-width: 1400px) {  body  { font-size:2.8em;  } }
+@media all and (min-width: 1500px) {  body  { font-size:3.0em;  } }
+@media all and (min-width: 1500px) {  body  { font-size:3.2em;  } }
+@media all and (min-width: 1600px) {  body  { font-size:3.4em;  } }
+@media all and (min-width: 1700px) {  body  { font-size:3.6em;  } */
+body
+{
+	margin: 0px;
+	padding: 0px;
+}
+#leftmenu{
+	width:15%;
+	height: 100%;
+	position: fixed;
+	background-size: 100% 100%;
+	background-image:url('bg1.jpg');
+	color:white;
+	-webkit-transition:background 1s;
+}
+#logo
+{
+	position: relative;
+	height: 25%;
+	width: 100%;
+	background-size: 100% 100%;
+	background-image: url('logo.png');
+}
+#logo:hover
+{
+	background-image: url('logo2.png');
+	cursor:pointer;
+
+}
+#logo2
+{
+	position: relative;
+	height: 25%;
+	width: 100%;
+	background-size: 100% 100%;
+}
+#menulist
+{
+	position: relative;
+	height: 80%;
+	width: 100%;
+}
+#menulist_overlay
+{
+	position: absolute;
+	top:0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+}
+.menu
+{
+	height: 10%;
+	width: 100%;
+	border-bottom: 1px rgb(21, 45, 53) solid;
+	-webkit-transition:1s;
+	cursor: pointer;
+}
+.menu:hover
+{
+	background-color: rgb(151, 146, 156);
+	color:rgb(7, 11, 26);
+}
+.text
+{
+	position: relative;
+	height: calc(100%-5px);
+	float: left;
+	width: 80%;
+	padding-top:5px;
+	font-size: 22px;
+}
+.pic
+{
+	position: relative;
+	height: 100%;
+	float: left;
+	width: 20%;
+}
+#leftmenu_tathva
+{
+	width: 13%;
+	height: 100%;
+	position: fixed;
+	left: -25%;
+	background-size: 100% 100%;
+	background-image:url('bg1.jpg');
+	color:white;
+}
+#leftmenu_regular
+{
+	width: 13%;
+	height: 100%;
+	position: fixed;
+	left: -25%;
+	background-size: 100% 100%;
+	background-image:url('bg1.jpg');
+	color:white;
+}
+#leftmenu_events
+{
+	width: 13%;
+	height: 100%;
+	position: fixed;
+	left: -25%;
+	background-size: 100% 100%;
+	background-image:url('bg1.jpg');
+	color:white;
+}
+#contents
+{
+	width: 85%;
+	
+	height: auto;
+	min-height: 100%;
+	position:absolute;
+	left:15%;
+	
+}
+#heading
+{
+	width: 100%;
+	position: fixed;
+	height: 25%;
+	font-size: 60px;
+	font-family: 'Amaranth', sans-serif;
+	font-weight: bold;
+	color:white;
+	top:0px;
+}
+#headtext
+{
+	left: 10%;
+	top: 4%;
+	position: absolute;
+}
+#ctext
+{
+	color: white;
+	width: 80%;
+	position: relative;
+	margin-top:15.5%;
+	margin-left: 3%;
+	font-family: 'Lato', sans-serif;
+	font-size: 25px;
+	line-height: 40px;
+	letter-spacing: -1px;
+	font-weight: 100;
+	background-color: rgba(23,12,34,.7)
+
+}
+#bgcontainer {
+	-webkit-animation: rotating 80s linear infinite;
+    content: "";
+    position: absolute;
+    background: url(bg2.jpg);
+    height: 100%;
+    width: 100%; 
+    /* Using Glen Maddern's trick /via @mente */
+
+    /* don't forget to use the prefixes you need */
+
+    -webkit-filter: blur(5px);
+}
+@-webkit-keyframes rotating {
+    0%{
+        background-position: 0% 0%;
+    }
+   20%{
+        background-position: 10% 20%;
+    }
+   50%{
+        background-position: 50% 40%;
+    }
+   60%{
+        background-position: 40% 30%;
+    }
+   80%{
+        background-position: 70% 20%;
+    }
+   100%{
+        background-position: 0% 0%;
+    }
+}
+</style>
+</head>
+<body>
+	<div id="leftmenu">
+		<div id="logo"></div>
+		<div id="menulist">
+
+			<div class="menu" id="tathva">
+				<div class="pic"></div>
+				<div class="text">Tathva</div>
+			</div>
+			<div class="menu">
+				<div class="pic"></div>
+				<div class="text">Gallery</div>
+			</div>
+			<div class="menu" id="events">
+				<div class="pic"></div>
+				<div class="text">Events</div>
+			</div>
+			<div class="menu" id="regular">
+				<div class="pic"></div>
+				<div class="text">Regular</div>
+			</div>
+			<div class="menu f">
+				<div class="pic"></div>
+				<div class="text">Contacts</div>
+			</div>
+			<div class="menu f">
+				<div class="pic"></div>
+				<div class="text">Infinitum</div>
+			</div>
+		</div>
+	</div>
+	<div id="leftmenu_events">
+		<div id="logo2"></div>
+		<div id="menulist">
+			<div class="menu f">
+				<div class="pic"></div>
+				<div class="text">Guruvandana</div>
+			</div>
+			<div class="menu f">
+				<div class="pic"></div>
+				<div class="text">Dizzy Grid</div>
+			</div>
+			<div class="menu f">
+				<div class="pic"></div>
+				<div class="text">MathBlood</div>
+			</div>
+			<div class="menu f">
+				<div class="pic"></div>
+				<div class="text">Kreiszy Clicks</div>
+			</div>
+			<div class="menu back f">
+				<div class="pic"></div>
+				<div class="text">HOME</div>
+			</div>
+		</div>
+	</div>
+	<div id="leftmenu_regular">
+		<div id="logo2"></div>
+		<div id="menulist">
+			<div class="menu f">
+				<div class="pic"></div>
+				<div class="text">Sudoku</div>
+			</div>
+			<div class="menu f">
+				<div class="pic"></div>
+				<div class="text">LogiQuest</div>
+			</div>
+			<div class="menu f">
+				<div class="pic"></div>
+				<div class="text">Encipher</div>
+			</div>
+			<div class="menu back f">
+				<div class="pic"></div>
+				<div class="text">HOME</div>
+			</div>
+		</div>
+	</div>
+	<div id="leftmenu_tathva">
+		<div id="logo2"></div>
+		<div id="menulist">
+			<div class="menu f">
+				<div class="pic"></div>
+				<div class="text">Stall</div>
+			</div>
+			<div class="menu f">
+				<div class="pic"></div>
+				<div class="text">LogIQ</div>
+			</div>
+			<div class="menu f">
+				<div class="pic"></div>
+				<div class="text">Tathva Open</div>
+			</div>
+			<div class="menu back f">
+				<div class="pic"></div>
+				<div class="text">HOME</div>
+			</div>
+		</div>
+	</div>
+	<div id="contents">
+		<div id="bgcontainer"></div>
+		<div id="ctext"></div>
+		<div id="heading"><div id="headtext">HOME</div></div>
+	</div>
+</body><!--Guruvandana 
+Dizzy Grid
+MathBlood
+Fast Track
+Kreiszy Clicks
+Sudoku
+LogiQuest
+Encipher
+Mathematica Stall
+LogIQ
+Tathva Open
+Infinitum-->
+<script src="jquery.js"></script>
+<script>
+	var curmenu="",left_hide_dist=25,$leftmenu=$("#leftmenu");
+	$("#tathva").bind("click",function(){
+		curmenu=$("#leftmenu_tathva");
+		curmenu.animate({"left":"0px"},"slow");
+		$leftmenu.css({"background-color":"rgb(15, 24, 60)"});
+		$("#menulist").append("<div id='menulist_overlay'></div>");
+		$("#menulist_overlay").bind("click",function(){
+			curmenu.animate({"left":-left_hide_dist+"%"},"slow")
+			$leftmenu.css({"background-color":"rgb(7, 11, 26)"});
+			$("#menulist_overlay").remove();})
+	});
+	$("#regular").bind("click",function(){
+		curmenu=$("#leftmenu_regular");
+		curmenu.animate({"left":"0px"},"slow");
+		$leftmenu.css({"background-color":"rgb(15, 24, 60)"});
+		$("#menulist").append("<div id='menulist_overlay'></div>");
+		$("#menulist_overlay").bind("click",function(){
+			curmenu.animate({"left":-left_hide_dist+"%"},"slow")
+			$leftmenu.css({"background-color":"rgb(7, 11, 26)"});
+			$("#menulist_overlay").remove();})	
+	});
+$("#events").bind("click",function(){
+	curmenu=$("#leftmenu_events");
+	curmenu.animate({"left":"0px"},"slow");
+	$leftmenu.css({"background-color":"rgb(15, 24, 60)"});
+	$("#menulist").append("<div id='menulist_overlay'></div>");
+	$("#menulist_overlay").bind("click",function(){
+		curmenu.animate({"left":-left_hide_dist+"%"},"slow")
+		$leftmenu.css({"background-color":"rgb(7, 11, 26)"});
+		$("#menulist_overlay").remove();})
+	});
+$(".back").bind("click",function(){
+	curmenu.animate({"left":-left_hide_dist+"%"},"slow")
+	$leftmenu.css({"background-color":"rgb(7, 11, 26)"});
+	$("#menulist_overlay").remove();
+})
+$(".f").bind("click",function(){
+	$("#headtext").html($(this).find(".text").html());
+	var $that=$(this);
+	$("#ctext").animate({"left":"30px"});
+	$("#ctext").fadeOut("fast",function(){$("#ctext").html(writeup[$that.find(".text").html()]).fadeIn()});
+})
+var pic={};
+pic["Guruvandana"]="Guruvandana.jpg";
+pic["Dizzy Grid"]="Dizzy Grid.jpg";
+pic["MathBlood"]="Mathblood.jpg";
+pic["FastTrack"]="FastTrack.jpg";
+pic["Kreiszy Clicks"]="Kreiszy Clicks.jpg";
+pic["Sudoku"]="Sudoku.jpg";
+pic["LogiQuest"]="LogiQuest.jpg";
+pic["Encipher"]="Encipher.jpg";
+pic["Stall"]="Stall.jpg";
+pic["LogIQ"]="LogiQuest.jpg";
+pic["Tathva Open"]="Tathva Open.jpg";
+pic["Infinitum"]="Infinitum.jpg";
+var writeup={};
+writeup["HOME"]="Club Mathematica is a tier-one club of National Institute of Technology, Calicut that began its journey on 19 November, 2003 and continues to be one of the most esteemed student organization of NITC. The main aim of the club is to develop  students' interest in Mathematics and Logic via a wide range of events that we conduct throughout the year.  Club Mathematica organizes numerous events for the students ranging from brainstorming and thought provoking events like LogIQ and Encipher to fun filled and entertaining events like Fastrack and Mathblood. We also conduct Infinitum, which aims at the younger minds from different schools at various parts of Kerala and neighboring states. The club is always proud to present its stall, filled with lots of hands-on puzzles and thought provoking, models of real world applications of mathematics during the techno - management fest, Tathva.";
+writeup["Guruvandana"]="<img src='"+pic["Guruvandana"]+"' height='200px' width='200px' style='float:left;'></img>Guruvandana is a week long inter-branch competition, conducted exclusively for the first years of NIT Calicut. It is an extravaganza packed with events that test your mental IQ, strategic planning, quick thinking skills and competitiveness. It is the most awaited and exciting event of the club. These are the  events conducted during Guruvandana.";
+writeup["MathBlood"]="<img src='"+pic["Mathblood"]+"' height='200px' width='200px' style='float:left;'></img>This is the event where you need to use the best of your strategy to bring your foes down. In other words, it upholds the principle of survival of the fittest. Challenge your opponents ! But don't forget to defend your team when the questions are charged at you.";
+writeup["FastTrack"]="<img src='"+pic["FastTrack"]+"' height='200px' width='200px' style='float:left;'></img>This event starts with a preliminary round that tests your mathematical skills and quick thinking ability. The rounds that follow have ciphers and logical questions. Finally, the round that everyone looks forward to – The fun-filled treasure hunt that will take you through the peaks and valleys of the campus while seeking the  hidden treasure. ";
+writeup["Kreiszy Clicks"]="<img src='"+pic["Kreiszy Clicks"]+"' height='200px' width='200px' style='float:left;'></img>Capture the various mathematical aspects of the campus through your lens and win your way!!";
+writeup["Sudoku"]="<img src='"+pic["Sudoku"]+"' height='200px' width='200px' style='float:left;'></img>Sudoku is a puzzle that is commonly known to everyone. But even if you are a master sudoku player, you may find yourself getting challenged by the puzzles that you will find here. ";
+writeup["LogiQuest"]="<img src='"+pic["LogiQuest"]+"' height='200px' width='200px' style='float:left;'></img>A pen-paper event with a lot of brain buzzing logical questions to awaken the genius in you.";
+writeup["Encipher"]="<img src='"+pic["Encipher"]+"' height='200px' width='200px' style='float:left;'></img>Crack the code. Decode the various coded phrases by replacing the letters or changing their orientation. Encipher is for all those Sherlock Holmes out there.";
+writeup["Stall"]="<img src='"+pic["Stall"]+"' height='200px' width='200px' style='float:left;'></img>Every year at Tathva, Club Mathematica puts up a stall in the Electronics Lecture Hall Complex of NITC based on a math related theme and the stall is decorated to highlight the theme. There will be working models and he most awaited and exciting event of the club. These are the  events conducted during Guruvandana.";
+writeup["Dizzy Grid"]="<img src='"+pic["Dizzy Grid"]+"' height='200px' width='200px' style='float:left;'></img>Using the clues that are given to you, move across the board like a devious knight to find the hidden scientists in the3D figures that will showcase the theme. However, the main attraction of the stall are the puzzles!! Tricky and entertaining, the puzzles will surely leave you clueless and intrigued!!";
+writeup["LogIQ"]="<img src='"+pic["LogIQ"]+"' height='200px' width='200px' style='float:left;'></img>LogIQ is a logical quizzing event conducted by Club Mathematica as a part of Tathva.";
+writeup["Tathva Open"]="<img src='"+pic["Tathva Open"]+"' height='200px' width='200px' style='float:left;'></img>Every year during Tathva, the club conducts Rubik's Cube solving event to find out the fastest Rubik's cube solver.  If you think you are a cracker-jacker at solving the Rubik's cube, this is the place to be.";
+writeup["Infinitum"]="<img src='"+pic["Infinitum"]+"' height='200px' width='200px' style='float:left;'></img>Infinitum is an event of Club Mathematica that is conducted outside the college for schools in South India. It has been conducted in various schools in Calicut throughout the previous years. This year, it was conducted at schools in Thrissur and also, Andhra Pradesh. Conducted for students in the Higher Secondary, it starts with a pen-paper written prelims and concludes after several fun quizzes and puzzles."
+$("#ctext").html(writeup["HOME"]);
+</script>
+</html>
